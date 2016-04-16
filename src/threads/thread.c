@@ -12,6 +12,8 @@
 #include "threads/synch.h"
 #include "threads/vaddr.h"
 #include "thread.h"
+#include "synch.h"
+#include "../lib/kernel/list.h"
 
 #ifdef USERPROG
 #include "userprog/process.h"
@@ -350,6 +352,10 @@ thread_set_priority (int new_priority)
   current->priority = new_priority;
 
 
+  //check priority if current thread has higher priority, assign toholder
+  if(current->priority < old_priority){
+    donate_priority(old_priority); //donate priority and push on stack
+  }
 
   if(old_priority > new_priority) {
     check_priority();
@@ -358,12 +364,31 @@ thread_set_priority (int new_priority)
   intr_set_level(old_level);
 }
 
+
+void donate_priority(int old_priority){
+    thread_current()->priority = old_priority;
+    struct thread * t = thread_current();
+    struct lock * l = thread_current()->requested_lock;
+    int i = 0;
+    int depth =  (int) sizeof(l)/sizeof(struct lock);
+    while(l && l->holder != NULL && i < depth && l->holder->priority < old_priority){
+        i++;
+        l->holder->priority = old_priority;
+        t = l->holder;
+        l = t->requested_lock;
+    }
+}
+
+
 /* Returns the current thread's priority. */
 int
 thread_get_priority (void)
 {
   enum intr_level old_level = intr_disable();
   int priority = thread_current()->priority;
+
+  //look in some sort of list for waiting threads on a lock
+  struct thread * t =thread_current()->requested_lock->holder;
 
   intr_set_level(old_level);
   return priority;
