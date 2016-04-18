@@ -31,34 +31,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mlfqs-block.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mlfqs-block.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/tests/threads/mlfqs-block.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-197">
-              <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+            <state relative-caret-position="73">
+              <caret line="52" column="6" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="thread.c" pinned="false" current-in-tab="false">
+      <file leaf-file-name="thread.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/threads/thread.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="453" column="1" selection-start-line="453" selection-start-column="1" selection-end-line="453" selection-end-column="1" />
+            <state relative-caret-position="253">
+              <caret line="755" column="1" selection-start-line="755" selection-start-column="1" selection-end-line="755" selection-end-column="1" />
               <folding>
                 <element signature="e#4547#4593#0" expanded="true" />
-                <element signature="e#18137#18197#0" expanded="true" />
+                <element signature="e#18516#18576#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="timer.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/devices/timer.c">
+      <file leaf-file-name="mlfqs-fair.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/tests/threads/mlfqs-fair.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="220" column="0" selection-start-line="220" selection-start-column="0" selection-end-line="220" selection-end-column="0" />
+            <state relative-caret-position="15">
+              <caret line="96" column="5" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -97,28 +97,8 @@
       <file leaf-file-name="thread.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/threads/thread.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="124" column="1" selection-start-line="124" selection-start-column="1" selection-end-line="124" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tests.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tests/threads/tests.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-559">
-              <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mlfqs-load-1.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tests/threads/mlfqs-load-1.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
+            <state relative-caret-position="19">
+              <caret line="133" column="34" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -646,17 +626,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/threads/thread.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6585">
-          <caret line="439" column="2" selection-start-line="439" selection-start-column="2" selection-end-line="439" selection-end-column="2" />
-          <folding>
-            <element signature="e#4547#4593#0" expanded="true" />
-            <element signature="e#18137#18197#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/threads/fp_arithmetic.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -695,7 +664,7 @@
           <caret line="439" column="2" selection-start-line="439" selection-start-column="2" selection-end-line="439" selection-end-column="2" />
           <folding>
             <element signature="e#4547#4593#0" expanded="true" />
-            <element signature="e#18137#18197#0" expanded="true" />
+            <element signature="e#18516#18576#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -738,7 +707,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#4547#4593#0" expanded="true" />
-            <element signature="e#18137#18197#0" expanded="true" />
+            <element signature="e#18516#18576#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -794,7 +763,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#4547#4593#0" expanded="true" />
-            <element signature="e#18137#18197#0" expanded="true" />
+            <element signature="e#18516#18576#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -850,7 +819,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#4547#4593#0" expanded="true" />
-            <element signature="e#18137#18197#0" expanded="true" />
+            <element signature="e#18516#18576#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -989,14 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/threads/tests.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-559">
-          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/threads/fp_arithmetic.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1013,14 +974,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/threads/thread.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="124" column="1" selection-start-line="124" selection-start-column="1" selection-end-line="124" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/devices/timer.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="343">
@@ -1029,22 +982,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/threads/thread.c">
+    <entry file="file://$PROJECT_DIR$/src/tests/threads/mlfqs-block.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="453" column="1" selection-start-line="453" selection-start-column="1" selection-end-line="453" selection-end-column="1" />
-          <folding>
-            <element signature="e#4547#4593#0" expanded="true" />
-            <element signature="e#18137#18197#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="73">
+          <caret line="52" column="6" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/threads/mlfqs-block.c">
+    <entry file="file://$PROJECT_DIR$/src/tests/threads/tests.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-197">
-          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+        <state relative-caret-position="-559">
+          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/threads/mlfqs-fair-2.ck">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/threads/mlfqs-fair.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="96" column="5" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/threads/thread.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="133" column="34" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/threads/thread.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="755" column="1" selection-start-line="755" selection-start-column="1" selection-end-line="755" selection-end-column="1" />
+          <folding>
+            <element signature="e#4547#4593#0" expanded="true" />
+            <element signature="e#18516#18576#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

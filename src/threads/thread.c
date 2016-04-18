@@ -152,8 +152,8 @@ thread_tick (void)
 #endif
   else
     kernel_ticks++;
-    backtrace();
-    if(thread_mlfqs) {
+
+  if(thread_mlfqs) {
       if(t != idle_thread){
         t->recent_cpu = add_fp_int(t->recent_cpu,1);
       }
@@ -164,14 +164,22 @@ thread_tick (void)
 
         //reset recent_cpu for all threads
         int avg_part = mul_fp_int(avg_load,2);
-        avg_part  /= add_fp_int(avg_part,1);
+        avg_part  = div_fp_x_y(avg_part,add_fp_int(avg_part,1));
         struct list_elem * el = list_begin(&all_list);
         for(el = list_begin(&all_list) ; el != list_end(&all_list); el = list_next(el)){
           struct thread * tmp = list_entry(el,struct thread, allelem);
           tmp->recent_cpu = add_fp_int(mul_fp_x_y(avg_part,tmp->recent_cpu) ,tmp->nice);
         }
       }
-    }
+
+      if(timer_ticks() % TIMER_FREQ == 4){
+        struct list_elem * el;
+        for(el = list_begin(&all_list); el != list_end(&all_list);el= list_next(el)){
+          struct thread * tmp = list_entry(el,struct thread, allelem);
+          tmp->priority = sub_fp_x_y(convert_int_to_fp(PRI_MAX) - subtract_fp_int(div_fp_int(tmp->recent_cpu,4),tmp->nice * 2));
+        }
+      }
+  }
 
   /* Enforce preemption. */
   if (++thread_ticks >= TIME_SLICE)
