@@ -188,13 +188,13 @@ timer_interrupt (struct intr_frame *args UNUSED)
   while(element != list_end(&sleep_list)) {
     struct thread *thread = list_entry(element, struct thread, sleep_elem);
     if (thread->waketime > current_ticks) {
-      break;
+      check_priority();
+      return;
     }
     list_remove(element);
     thread_unblock(thread);
     element = list_begin(&sleep_list);
   }
-  check_priority();
 }
 
 /* Returns true if LOOPS iterations waits for more than one timer

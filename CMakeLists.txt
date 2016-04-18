@@ -348,6 +348,6 @@ set(SOURCE_FILES
     src/userprog/tss.h
     src/utils/setitimer-helper.c
     src/utils/squish-pty.c
-    src/utils/squish-unix.c)
+    src/utils/squish-unix.c src/threads/fp_arithmetic.h)
 
 add_executable(pintos_anon ${SOURCE_FILES})
