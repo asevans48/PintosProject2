@@ -83,18 +83,21 @@ typedef int tid_t;
 struct thread
 {
     /* Owned by thread.c. */
-    tid_t tid;                          /* Thread identifier. */
+    tid_t tid;/* Thread identifier. */
+    int recent_cpu;
+    int nice;
     enum thread_status status;          /* Thread state. */
     char name[16];                      /* Name (for debugging purposes). */
     uint8_t *stack;                     /* Saved stack pointer. */
     int priority;                       /* Priority. */
-    int donated_priority;
+    int default_priority;
     struct list_elem allelem;           /* List element for all threads list. */
     int64_t waketime;
     struct list_elem sleep_elem;
-    struct list donators; /*List of donators*/
-    struct lock *requested_lock; /*Lock the current thread is waiting on*/
-    struct list_elem donate_elem; /*List element for priority thread donation*/
+    struct list donators;
+    struct list_elem donate_elem;
+    struct lock *requested_lock;
+
 
     /* Shared between thread.c and synch.c. */
     struct list_elem elem;              /* List element. */
@@ -146,5 +149,6 @@ int thread_get_load_avg (void);
 
 bool priority_sort(const struct list_elem *a, const struct list_elem *b, void *aux);
 void check_priority(void);
+void donate(void);
 
 #endif /* threads/thread.h */

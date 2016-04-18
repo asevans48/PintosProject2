@@ -310,20 +310,21 @@
       <sourceFolder url="file://$MODULE_DIR$/src/devices/serial.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/devices/speaker.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/threads/malloc.c" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/threads/init.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/threads/synch.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/threads/thread.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/threads/loader.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/threads/palloc.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/threads/thread.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/threads/flags.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/threads/synch.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/threads/init.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/threads/interrupt.c" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/threads/synch.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/threads/fp_arithmetic.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/threads/vaddr.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/threads/pte.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/threads/intr-stubs.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/threads/init.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/threads/io.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/threads/init.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/threads/intr-stubs.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/threads/interrupt.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/threads/malloc.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/threads/switch.h" isTestSource="false" />
