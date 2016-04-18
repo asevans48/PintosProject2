@@ -115,7 +115,6 @@ struct thread
    If true, use multi-level feedback queue scheduler.
    Controlled by kernel command-line option "-o mlfqs". */
 extern bool thread_mlfqs;
-
 void thread_init (void);
 void thread_start (void);
 
@@ -133,15 +132,14 @@ tid_t thread_tid (void);
 const char *thread_name (void);
 
 void thread_exit (void) NO_RETURN;
-                        void thread_yield (void);
+void thread_yield (void);
 
 /* Performs some operation on thread t, given auxiliary data AUX. */
-                        typedef void thread_action_func (struct thread *t, void *aux);
-                        void thread_foreach (thread_action_func *, void *);
+typedef void thread_action_func (struct thread *t, void *aux);
+void thread_foreach (thread_action_func *, void *);
 
 int thread_get_priority (void);
 void thread_set_priority (int);
-
 int thread_get_nice (void);
 void thread_set_nice (int);
 int thread_get_recent_cpu (void);

@@ -3,6 +3,8 @@
 // Created by aevans on 4/17/16.
 //
 #define f  (1 << 14)
+#define INT_MAX ((1<<31) -1)
+#define INT_MIN (-(1<<31))
 #ifndef PINTOS_ANON_FP_ARITHMETIC_H
 #define PINTOS_ANON_FP_ARITHMETIC_H
 
@@ -38,14 +40,14 @@ int subtract_fp_int(int fp, int i){
     return (fp - i * f);
 }
 
-int add_fp_int(int fp,int i){
-    return (fp + i * f);
-}
 
 int subtract_fp_x_y(int x,int y){
     return x - y;
 }
 
+int add_fp_int(int fp,int i){
+    return (fp + i * f);
+}
 
 int add_fp_x_y(int x,int y){
     return x + y;
@@ -58,9 +60,9 @@ int convert_fp_to_int_toward_zero(int fp){
 
 int convert_fp_to_nearest_int(int fp){
     if(fp >= 0) {
-        return (fp + f / 2);
+        return (fp + f / 2) / f;
     }else{
-        return (fp - f / 2);
+        return (fp - f / 2) / f;
     }
 }
 
