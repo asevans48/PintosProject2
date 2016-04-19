@@ -115,8 +115,6 @@ void thread_init (void){
   init_thread (initial_thread, "main", PRI_DEFAULT);
   initial_thread->status = THREAD_RUNNING;
   initial_thread->tid = allocate_tid ();
-  initial_thread->recent_cpu = 0;
-  initial_thread->nice = 0;
 }
 
 /* Starts preemptive thread scheduling by enabling interrupts.
@@ -137,6 +135,8 @@ thread_start (void)
   sema_down (&idle_started);
 }
 
+
+
 /* Called by the timer interrupt handler at each timer tick.
    Thus, this function runs in an external interrupt context. */
 void
@@ -154,42 +154,10 @@ thread_tick (void)
   else
     kernel_ticks++;
 
-  if(thread_mlfqs) {
-      if(t != idle_thread){
-        t->recent_cpu = add_fp_int(t->recent_cpu,1);
-      }
-
-
-      if (timer_ticks() % TIMER_FREQ == 0) {
-        //reset load average
-        avg_load = add_fp_x_y(mul_fp_x_y(div_fp_x_y(convert_int_to_fp(59),convert_int_to_fp(60)),avg_load) , mul_fp_int(div_fp_x_y(convert_int_to_fp(1),convert_int_to_fp(60)),list_size(&ready_list)));
-
-        //reset recent_cpu for all threads
-        int avg_part = mul_fp_int(avg_load,2);
-        avg_part  = div_fp_x_y(avg_part,add_fp_int(avg_part,1));
-        struct list_elem * el = list_begin(&all_list);
-        for(el = list_begin(&all_list) ; el != list_end(&all_list); el = list_next(el)){
-          struct thread * tmp = list_entry(el,struct thread, allelem);
-          tmp->recent_cpu = add_fp_int(mul_fp_x_y(avg_part,tmp->recent_cpu) ,tmp->nice);
-          ASSERT(tmp->recent_cpu == convert_int_to_fp(tmp->nice));
-        }
-      }
-
-      if(timer_ticks() % TIMER_FREQ == 4){
-
-        struct list_elem * el;
-        for(el = list_begin(&all_list); el != list_end(&all_list);el= list_next(el)){
-          struct thread * tmp = list_entry(el,struct thread, allelem);
-          tmp->priority = subtract_fp_x_y(convert_int_to_fp(PRI_MAX) , subtract_fp_int(div_fp_x_y(tmp->recent_cpu,convert_int_to_fp(4)),tmp->nice * 2));
-        }
-
-      }
-  }
 
   /* Enforce preemption. */
-  if (++thread_ticks >= TIME_SLICE)
-    intr_yield_on_return ();
-
+  //if (++thread_ticks >= TIME_SLICE)
+  //  intr_yield_on_return ();
 }
 
 /* Prints thread statistics. */
@@ -397,7 +365,6 @@ void
 thread_set_priority (int new_priority)
 {
   if(!thread_mlfqs) {
-
     enum intr_level old_level = intr_disable();
     struct thread *current = thread_current();
     int old_priority = current->priority;
@@ -476,7 +443,7 @@ thread_get_load_avg (void)
 /* Returns 100 times the current thread's recent_cpu value. */
 int thread_get_recent_cpu (void) {
   enum intr_level old_level = intr_disable();
-  int recent_cpu_value = convert_fp_to_nearest_int(mul_fp_x_y(thread_current()->recent_cpu,100));
+  int recent_cpu_value = convert_fp_to_nearest_int(mul_fp_int(thread_current()->recent_cpu,100));
   intr_set_level(old_level);
   return recent_cpu_value;
 }
@@ -688,23 +655,28 @@ allocate_tid (void)
   return tid;
 }
 
+
+
 /* Offset of `stack' member within `struct thread'.
    Used by switch.S, which can't figure it out on its own. */
 uint32_t thread_stack_ofs = offsetof (struct thread, stack);
 
 void check_priority(void) {
+  if(!list_empty(&ready_list)) {
+    struct thread *recent_add = list_entry(list_begin(&ready_list), struct thread, elem);
 
-  struct thread *recent_add = list_entry(list_begin(&ready_list), struct thread, elem);
-
-  if (intr_context()) {
-    thread_ticks++;
-    if (thread_current()->priority < recent_add->priority || (thread_ticks >= TIME_SLICE == thread_current()->priority == recent_add->priority)) {
-      intr_yield_on_return();
+    if (intr_context()) {
+      thread_ticks++;
+      if (thread_current()->priority < recent_add->priority ||
+          (thread_ticks >= TIME_SLICE && thread_current()->priority == recent_add->priority)) {
+        intr_yield_on_return();
+      }
+      return;
     }
-  }
 
-  if (thread_current()->priority < recent_add->priority) {
-    thread_yield();
+    if (thread_current()->priority < recent_add->priority) {
+      thread_yield();
+    }
   }
 }
 
@@ -758,4 +730,60 @@ void remove_donators(struct lock *lock) {
     }
     first_elem = next_elem;
   }
+}
+
+
+void incr_recent_cpu(struct thread *t){
+  if(t != idle_thread){
+    t->recent_cpu = add_fp_int(t->recent_cpu,1);
+  }
+}
+
+void set_avg_load(struct thread * t) {
+    //reset load average
+    int sz = list_size(&ready_list);
+    if(t != idle_thread){
+      sz += 1;
+    }
+
+    int new_load = div_fp_x_y(convert_int_to_fp(59), convert_int_to_fp(60));
+    new_load = mul_fp_x_y(new_load, avg_load);
+    int sec_new_load = div_fp_int(convert_int_to_fp(sz), convert_int_to_fp(60));
+    avg_load = add_fp_x_y(new_load, sec_new_load);
+    ASSERT(avg_load >= 0);
+}
+
+void reset_proiriorities_mlfqs(void){
+   struct list_elem * el = list_begin(&all_list);
+   int mulpart = 0;
+   for(el = list_begin(&all_list) ; el != list_end(&all_list); el = list_next(el)){
+     struct thread * tmp = list_entry(el,struct thread, allelem);
+     set_recent_cpu(tmp);
+     set_mlfqs_priority(tmp);
+   }
+}
+
+void set_recent_cpu(struct thread * t){
+    //reset recent_cpu for all threads
+    int avg_part = mul_fp_int(avg_load,2);
+    int avg_p_1 = add_fp_int(avg_part,1);
+    avg_part  = div_fp_x_y(avg_part,avg_p_1);
+    avg_part = mul_fp_x_y(avg_part,t->recent_cpu);
+    t->recent_cpu = add_fp_int(avg_part,t->nice);
+}
+
+
+void set_mlfqs_priority(struct thread * t){
+    if(t != idle_thread) {
+      int new_priority = convert_int_to_fp(PRI_MAX);
+      new_priority = subtract_fp_x_y(new_priority,div_fp_x_y(t->recent_cpu,convert_int_to_fp(4)));
+      new_priority = convert_fp_to_nearest_int(subtract_fp_x_y(new_priority,convert_int_to_fp((2*t->nice))));
+
+      if (new_priority < PRI_MIN) {
+        new_priority = PRI_MIN;
+      } else if (new_priority > PRI_MAX) {
+        new_priority = PRI_MAX;
+      }
+      t->priority = new_priority;
+    }
 }

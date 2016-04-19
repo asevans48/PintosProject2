@@ -21,23 +21,23 @@ int div_fp_x_y(int x,int y);
 int div_fp_int(int fp,int i);
 
 int div_fp_int(int fp,int i){
-    return ((int64_t) i * f) / fp;
+    return fp / i;
 }
 
 int div_fp_x_y(int x, int y){
-    return x/y;
+    return ((int64_t) x) * f / y;
 }
 
 int mul_fp_int(int fp,int i){
-    return ((int64_t) i * f) * fp;
+    return fp * i;
 }
 
 int mul_fp_x_y(int x, int y){
-    return x * y;
+    return ((int64_t) x) * y / f;
 }
 
 int subtract_fp_int(int fp, int i){
-    return (fp - i * f);
+    return fp - convert_int_to_fp(i);
 }
 
 
@@ -46,7 +46,7 @@ int subtract_fp_x_y(int x,int y){
 }
 
 int add_fp_int(int fp,int i){
-    return (fp + i * f);
+    return fp + convert_int_to_fp(i) ;
 }
 
 int add_fp_x_y(int x,int y){

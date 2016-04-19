@@ -31,6 +31,7 @@
 #include <string.h>
 #include "threads/interrupt.h"
 #include "threads/thread.h"
+#include "synch.h"
 
 void remove_donators(struct lock *lock);
 
@@ -71,7 +72,9 @@ sema_down (struct semaphore *sema)
   struct thread *current = thread_current();
   while (sema->value == 0)
   {
-    donate();
+    if(!thread_mlfqs) {
+      donate();
+    }
     list_insert_ordered(&sema->waiters, &current->elem, (list_less_func *) &priority_sort, NULL);
     thread_block();
   }
@@ -210,7 +213,7 @@ lock_acquire (struct lock *lock)
 
   struct thread *current = thread_current();
 
-  if (lock->holder) {
+  if (!thread_mlfqs && lock->holder) {
     current->requested_lock = lock;
     list_insert_ordered(&lock->holder->donators, &current->donate_elem, (list_less_func *) &priority_sort, NULL);
     //current->requested_lock = lock;
@@ -241,7 +244,7 @@ lock_try_acquire (struct lock *lock)
   success = sema_try_down (&lock->semaphore);
   if (success) {
     current->requested_lock = NULL;
-    lock->holder = thread_current ();
+    lock->holder = thread_current();
   }
   intr_set_level(old_level);
   return success;
@@ -260,8 +263,10 @@ lock_release (struct lock *lock)
 
   enum intr_level old_level = intr_disable();
   lock->holder = NULL;
-  remove_donators(lock);
-  update_priority();
+  if(!thread_mlfqs) {
+    remove_donators(lock);
+    update_priority();
+  }
   lock->holder = NULL;
   sema_up (&lock->semaphore);
   intr_set_level (old_level);

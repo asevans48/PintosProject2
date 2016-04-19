@@ -148,5 +148,9 @@ int thread_get_load_avg (void);
 bool priority_sort(const struct list_elem *a, const struct list_elem *b, void *aux);
 void check_priority(void);
 void donate(void);
-
+void incr_recent_cpu(struct thread * t);
+void set_recent_cpu(struct thread *t);
+void set_avg_load(struct thread *t);
+void set_mlfqs_priority(struct thread *t);
+void reset_proiriorities_mlfqs(void);
 #endif /* threads/thread.h */
