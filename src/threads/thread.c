@@ -15,6 +15,7 @@
 #include "devices/timer.h"
 #include "thread.h"
 #include "../lib/kernel/list.h"
+#include "fp_arithmetic.h"
 
 #ifdef USERPROG
 #include "userprog/process.h"
@@ -158,9 +159,10 @@ thread_tick (void)
         t->recent_cpu = add_fp_int(t->recent_cpu,1);
       }
 
+
       if (timer_ticks() % TIMER_FREQ == 0) {
         //reset load average
-        avg_load = add_fp_x_y(mul_fp_x_y(div_fp_int(convert_int_to_fp(59),60),avg_load) , mul_fp_int(div_fp_int(convert_int_to_fp(1),60),list_size(&ready_list)));
+        avg_load = add_fp_x_y(mul_fp_x_y(div_fp_x_y(convert_int_to_fp(59),convert_int_to_fp(60)),avg_load) , mul_fp_int(div_fp_x_y(convert_int_to_fp(1),convert_int_to_fp(60)),list_size(&ready_list)));
 
         //reset recent_cpu for all threads
         int avg_part = mul_fp_int(avg_load,2);
@@ -169,21 +171,25 @@ thread_tick (void)
         for(el = list_begin(&all_list) ; el != list_end(&all_list); el = list_next(el)){
           struct thread * tmp = list_entry(el,struct thread, allelem);
           tmp->recent_cpu = add_fp_int(mul_fp_x_y(avg_part,tmp->recent_cpu) ,tmp->nice);
+          ASSERT(tmp->recent_cpu == convert_int_to_fp(tmp->nice));
         }
       }
 
       if(timer_ticks() % TIMER_FREQ == 4){
+
         struct list_elem * el;
         for(el = list_begin(&all_list); el != list_end(&all_list);el= list_next(el)){
           struct thread * tmp = list_entry(el,struct thread, allelem);
-          tmp->priority = sub_fp_x_y(convert_int_to_fp(PRI_MAX) - subtract_fp_int(div_fp_int(tmp->recent_cpu,4),tmp->nice * 2));
+          tmp->priority = subtract_fp_x_y(convert_int_to_fp(PRI_MAX) , subtract_fp_int(div_fp_x_y(tmp->recent_cpu,convert_int_to_fp(4)),tmp->nice * 2));
         }
+
       }
   }
 
   /* Enforce preemption. */
   if (++thread_ticks >= TIME_SLICE)
     intr_yield_on_return ();
+
 }
 
 /* Prints thread statistics. */
@@ -439,7 +445,7 @@ thread_set_nice (int nice UNUSED){
 }
 
 int set_q_priority(struct thread * t){
-  int priority  = subtract_fp_x_y(convert_int_to_fp(PRI_MAX),div_fp_int(t->recent_cpu,4));
+  int priority  = subtract_fp_x_y(convert_int_to_fp(PRI_MAX),div_fp_x_y(t->recent_cpu,convert_int_to_fp(4)));
   priority = subtract_fp_int(priority, 2 * t->nice);
   return convert_fp_to_int_toward_zero(priority);
 }
@@ -471,7 +477,6 @@ thread_get_load_avg (void)
 int thread_get_recent_cpu (void) {
   enum intr_level old_level = intr_disable();
   int recent_cpu_value = convert_fp_to_nearest_int(mul_fp_x_y(thread_current()->recent_cpu,100));
-  printf("RECENT CPU VALUE %d\n",recent_cpu_value);
   intr_set_level(old_level);
   return recent_cpu_value;
 }

@@ -6,4 +6,5 @@ threads/thread.o: ../../threads/thread.c ../../threads/thread.h \
  ../../threads/intr-stubs.h ../../threads/palloc.h ../../threads/switch.h \
  ../../threads/synch.h ../../threads/vaddr.h ../../threads/loader.h \
  ../../threads/fp_arithmetic.h ../../devices/timer.h ../../lib/round.h \
- ../../threads/thread.h ../../threads/../lib/kernel/list.h
+ ../../threads/thread.h ../../threads/../lib/kernel/list.h \
+ ../../threads/fp_arithmetic.h

@@ -29,7 +29,7 @@ int div_fp_x_y(int x, int y){
 }
 
 int mul_fp_int(int fp,int i){
-    return ((int64_t) i) * (fp / f);
+    return ((int64_t) i * f) * fp;
 }
 
 int mul_fp_x_y(int x, int y){
