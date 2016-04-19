@@ -1,4 +1,4 @@
-qemu-system-x86_64 -device isa-debug-exit -hda /tmp/rkZhefSaa7.dsk -m 4 -net none -nographic -monitor null
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/0HaS6bNML9.dsk -m 4 -net none -nographic -monitor null
 PiLo hda1
 Loading...........
 Kernel command line: -q run alarm-priority
@@ -21,8 +21,8 @@ Executing 'alarm-priority':
 (alarm-priority) Thread priority 21 woke up.
 (alarm-priority) end
 Execution of 'alarm-priority' complete.
-Timer: 524 ticks
-Thread: 490 idle ticks, 34 kernel ticks, 0 user ticks
+Timer: 525 ticks
+Thread: 490 idle ticks, 35 kernel ticks, 0 user ticks
 Console: 840 characters output
 Keyboard: 0 keys pressed
 Powering off...

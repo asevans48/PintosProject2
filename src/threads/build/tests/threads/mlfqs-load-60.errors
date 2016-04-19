@@ -1,4 +1,3 @@
-WARNING: Image format was not specified for '/tmp/Pq_7QBdusH.dsk' and probing guessed raw.
+WARNING: Image format was not specified for '/tmp/SS9gU3PynO.dsk' and probing guessed raw.
          Automatically detecting the format is dangerous for raw images, write operations on block 0 will be restricted.
          Specify the 'raw' format explicitly to remove the restrictions.
-qemu: terminating on signal 2 from pid 6300

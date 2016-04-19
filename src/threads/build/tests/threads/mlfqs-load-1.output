@@ -1,4 +1,4 @@
-qemu-system-x86_64 -device isa-debug-exit -hda /tmp/0rd3VuW2Jb.dsk -m 4 -net none -nographic -monitor null
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/pYPL5rKQ5E.dsk -m 4 -net none -nographic -monitor null
 PiLo hda1
 Loading...........
 Kernel command line: -q -mlfqs run mlfqs-load-1
@@ -10,14 +10,14 @@ Boot complete.
 Executing 'mlfqs-load-1':
 (mlfqs-load-1) begin
 (mlfqs-load-1) spinning for up to 45 seconds, please wait...
-(mlfqs-load-1) FAIL: load average stayed below 0.5 for more than 45 seconds
-Kernel PANIC at ../../tests/threads/tests.c:93 in fail(): test failed
-Call stack: 0xc0027cf1.
-The `backtrace' program can make call stacks useful.
-Read "Backtraces" in the "Debugging Tools" chapter
-of the Pintos documentation for more information.
-Timer: 4622 ticks
-Thread: 0 idle ticks, 4622 kernel ticks, 0 user ticks
-Console: 716 characters output
+(mlfqs-load-1) load average rose to 0.5 after 42 seconds
+(mlfqs-load-1) sleeping for another 10 seconds, please wait...
+(mlfqs-load-1) load average fell back below 0.5 (to 0.43)
+(mlfqs-load-1) PASS
+(mlfqs-load-1) end
+Execution of 'mlfqs-load-1' complete.
+Timer: 5300 ticks
+Thread: 1000 idle ticks, 4300 kernel ticks, 0 user ticks
+Console: 650 characters output
 Keyboard: 0 keys pressed
 Powering off...

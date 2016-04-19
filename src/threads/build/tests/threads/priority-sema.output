@@ -1,4 +1,4 @@
-qemu-system-x86_64 -device isa-debug-exit -hda /tmp/0mg9r0dZdg.dsk -m 4 -net none -nographic -monitor null
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/vJxgi0VlA6.dsk -m 4 -net none -nographic -monitor null
 PiLo hda1
 Loading...........
 Kernel command line: -q run priority-sema

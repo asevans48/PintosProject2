@@ -1,5 +1,1 @@
-FAIL
-Kernel panic in run: PANIC at ../../threads/thread.c:367 in thread_yield(): assertion `!intr_context ()' failed.
-Call stack: 0xc0027cf1
-Translation of call stack:
-0xc0027cf1: debug_panic (.../../lib/kernel/debug.c:38)
+PASS

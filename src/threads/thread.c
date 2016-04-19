@@ -374,6 +374,7 @@ thread_set_priority (int new_priority)
     if (old_priority < current->priority) {
       donate();
     }
+
     if (old_priority > new_priority) {
       check_priority();
     }
@@ -382,9 +383,7 @@ thread_set_priority (int new_priority)
 }
 
 /* Returns the current thread's priority. */
-int
-thread_get_priority (void)
-{
+int thread_get_priority (void){
   enum intr_level old_level = intr_disable();
   int priority = thread_current()->priority;
   intr_set_level(old_level);
@@ -748,7 +747,7 @@ void set_avg_load(struct thread * t) {
 
     int new_load = div_fp_x_y(convert_int_to_fp(59), convert_int_to_fp(60));
     new_load = mul_fp_x_y(new_load, avg_load);
-    int sec_new_load = div_fp_int(convert_int_to_fp(sz), convert_int_to_fp(60));
+    int sec_new_load = div_fp_x_y(convert_int_to_fp(sz), convert_int_to_fp(60));
     avg_load = add_fp_x_y(new_load, sec_new_load);
     ASSERT(avg_load >= 0);
 }

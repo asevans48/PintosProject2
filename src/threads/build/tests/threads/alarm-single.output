@@ -1,4 +1,4 @@
-qemu-system-x86_64 -device isa-debug-exit -hda /tmp/ufyHSUZj3o.dsk -m 4 -net none -nographic -monitor null
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/j4DOWLENKv.dsk -m 4 -net none -nographic -monitor null
 PiLo hda1
 Loading...........
 Kernel command line: -q run alarm-single
@@ -14,13 +14,15 @@ Executing 'alarm-single':
 (alarm-single) thread 1 sleeps 20 ticks each time, and so on.
 (alarm-single) If successful, product of iteration count and
 (alarm-single) sleep duration will appear in nondescending order.
-Kernel PANIC at ../../threads/thread.c:367 in thread_yield(): assertion `!intr_context ()' failed.
-Call stack: 0xc0027cf1 0.
-The `backtrace' program can make call stacks useful.
-Read "Backtraces" in the "Debugging Tools" chapter
-of the Pintos documentation for more information.
-Timer: 133 ticks
-Thread: 110 idle ticks, 23 kernel ticks, 0 user ticks
-Console: 899 characters output
+(alarm-single) thread 0: duration=10, iteration=1, product=10
+(alarm-single) thread 1: duration=20, iteration=1, product=20
+(alarm-single) thread 2: duration=30, iteration=1, product=30
+(alarm-single) thread 3: duration=40, iteration=1, product=40
+(alarm-single) thread 4: duration=50, iteration=1, product=50
+(alarm-single) end
+Execution of 'alarm-single' complete.
+Timer: 274 ticks
+Thread: 250 idle ticks, 24 kernel ticks, 0 user ticks
+Console: 987 characters output
 Keyboard: 0 keys pressed
 Powering off...
