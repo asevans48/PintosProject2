@@ -1,0 +1,19 @@
+Copying tests/userprog/args-dbl-space to scratch partition...
+qemu-system-x86_64 -device isa-debug-exit -hda /tmp/2ZU8oRpC6E.dsk -m 4 -net none -nographic -monitor null
+PiLo hda1
+Loading............
+Kernel command line: -q -f extract run 'args-dbl-space two  spaces!'
+Pintos booting with 3,968 kB RAM...
+367 pages available in kernel pool.
+367 pages available in user pool.
+Kernel PANIC at ../../lib/kernel/list.c:172 in list_insert(): assertion `elem != NULL' failed.
+Call stack: 0xc0028212.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 0 ticks
+Thread: 0 idle ticks, 0 kernel ticks, 0 user ticks
+Console: 514 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...
