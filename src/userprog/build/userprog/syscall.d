@@ -6,5 +6,9 @@ userprog/syscall.o: ../../userprog/syscall.c ../../userprog/syscall.h \
  ../../filesys/filesys.h ../../threads/synch.h ../../lib/kernel/list.h \
  ../../threads/interrupt.h ../../threads/thread.h ../../threads/vaddr.h \
  ../../threads/loader.h ../../devices/shutdown.h \
+<<<<<<< HEAD
  ../../userprog/../threads/thread.h ../../userprog/process.h \
  ../../userprog/../threads/interrupt.h ../../userprog/../lib/syscall-nr.h
+=======
+ ../../userprog/../threads/thread.h ../../userprog/process.h
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347

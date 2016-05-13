@@ -16,6 +16,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/CMakeCache.txt" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/CMakeFiles/cmake.check_cache" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/results" afterPath="" />
+<<<<<<< HEAD
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-multiple.errors" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-multiple.output" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-multiple.result" afterPath="" />
@@ -34,6 +35,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-zero.errors" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-zero.output" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-zero.result" afterPath="" />
+=======
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/mlfqs-block.errors" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/mlfqs-block.output" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/mlfqs-block.result" afterPath="" />
@@ -61,15 +64,19 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/mlfqs-recent-1.errors" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/mlfqs-recent-1.output" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/mlfqs-recent-1.result" afterPath="" />
+<<<<<<< HEAD
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-change.errors" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-change.output" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-change.result" afterPath="" />
+=======
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-condvar.errors" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-condvar.output" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-condvar.result" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-chain.errors" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-chain.output" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-chain.result" afterPath="" />
+<<<<<<< HEAD
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-lower.errors" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-lower.output" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-lower.result" afterPath="" />
@@ -133,16 +140,56 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-sema.o" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-sema.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/threads/init.o" afterPath="$PROJECT_DIR$/src/threads/build/threads/init.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/threads/interrupt.o" afterPath="$PROJECT_DIR$/src/threads/build/threads/interrupt.o" />
+=======
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-sema.output" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-sema.result" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/kernel.o" afterPath="$PROJECT_DIR$/src/threads/build/kernel.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-sema.errors" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-sema.errors" />
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/threads/intr-stubs.o" afterPath="$PROJECT_DIR$/src/threads/build/threads/intr-stubs.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/threads/loader.o" afterPath="$PROJECT_DIR$/src/threads/build/threads/loader.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/threads/start.o" afterPath="$PROJECT_DIR$/src/threads/build/threads/start.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/threads/switch.o" afterPath="$PROJECT_DIR$/src/threads/build/threads/switch.o" />
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/threads/synch.o" afterPath="$PROJECT_DIR$/src/threads/build/threads/synch.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/threads/thread.o" afterPath="$PROJECT_DIR$/src/threads/build/threads/thread.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/threads/thread.d" afterPath="$PROJECT_DIR$/src/threads/build/threads/thread.d" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/init.c" afterPath="$PROJECT_DIR$/src/threads/init.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/synch.c" afterPath="$PROJECT_DIR$/src/threads/synch.c" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-multiple.errors" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-multiple.errors" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-multiple.output" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-multiple.output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-negative.errors" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-negative.errors" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-negative.output" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-negative.output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-priority.errors" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-priority.errors" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-priority.output" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-priority.output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-simultaneous.errors" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-simultaneous.errors" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-simultaneous.output" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-simultaneous.output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-single.errors" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-single.errors" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-single.output" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-single.output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-zero.errors" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-zero.errors" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-zero.output" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/alarm-zero.output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-change.errors" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-change.errors" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-change.output" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-change.output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-lower.errors" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-lower.errors" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-lower.output" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-lower.output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-multiple.errors" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-multiple.errors" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-multiple.output" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-multiple.output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-multiple2.errors" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-multiple2.errors" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-multiple2.output" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-multiple2.output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-nest.errors" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-nest.errors" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-nest.output" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-nest.output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-one.errors" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-one.errors" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-one.output" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-one.output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-sema.errors" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-sema.errors" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-sema.output" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-donate-sema.output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-fifo.errors" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-fifo.errors" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-fifo.output" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-fifo.output" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-preempt.errors" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-preempt.errors" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-preempt.output" afterPath="$PROJECT_DIR$/src/threads/build/tests/threads/priority-preempt.output" />
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/thread.c" afterPath="$PROJECT_DIR$/src/threads/thread.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/threads/thread.h" afterPath="$PROJECT_DIR$/src/threads/thread.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/userprog/exception.c" afterPath="$PROJECT_DIR$/src/userprog/exception.c" />
@@ -172,6 +219,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="thread.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/threads/thread.c">
           <provider selected="true" editor-type-id="text-editor">
@@ -189,47 +237,92 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
               <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+=======
+      <file leaf-file-name="process.c" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/userprog/process.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="574" column="7" selection-start-line="574" selection-start-column="7" selection-end-line="574" selection-end-column="7" />
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="syscall.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/userprog/syscall.c">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="8400">
               <caret line="560" column="0" selection-start-line="560" selection-start-column="0" selection-end-line="560" selection-end-column="36" />
+=======
+      <file leaf-file-name="process.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/userprog/process.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="process.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/userprog/process.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
               <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
+=======
+      <file leaf-file-name="init.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/threads/init.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="286" column="15" selection-start-line="286" selection-start-column="15" selection-end-line="286" selection-end-column="15" />
+              <folding>
+                <element signature="e#7321#7359#0" expanded="true" />
+              </folding>
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="exception.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/userprog/exception.c">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1470">
               <caret line="98" column="61" selection-start-line="98" selection-start-column="61" selection-end-line="98" selection-end-column="61" />
+=======
+      <file leaf-file-name="thread.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/threads/thread.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="580">
+              <caret line="243" column="0" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="process.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/userprog/process.c">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2415">
               <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="30" />
               <folding />
+=======
+      <file leaf-file-name="thread.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/threads/thread.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1950">
+              <caret line="130" column="25" selection-start-line="130" selection-start-column="16" selection-end-line="130" selection-end-column="25" />
+              <folding>
+                <element signature="e#5420#5516#0" expanded="true" />
+              </folding>
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
             </state>
           </provider>
         </entry>
@@ -247,6 +340,7 @@
         <option value="$PROJECT_DIR$/src/threads/synch.h" />
         <option value="$PROJECT_DIR$/src/tests/threads/mlfqs-block.c" />
         <option value="$PROJECT_DIR$/src/tests/threads/mlfqs-load-1.c" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/devices/timer.c" />
         <option value="$PROJECT_DIR$/src/threads/fp_arithmetic.h" />
         <option value="$PROJECT_DIR$/src/threads/synch.c" />
@@ -257,7 +351,18 @@
         <option value="$PROJECT_DIR$/src/userprog/process.c" />
         <option value="$PROJECT_DIR$/src/userprog/syscall.h" />
         <option value="$PROJECT_DIR$/src/userprog/process.h" />
+=======
+        <option value="$PROJECT_DIR$/src/threads/synch.c" />
+        <option value="$PROJECT_DIR$/src/devices/timer.c" />
+        <option value="$PROJECT_DIR$/src/threads/fp_arithmetic.h" />
+        <option value="$PROJECT_DIR$/src/userprog/process.h" />
+        <option value="$PROJECT_DIR$/src/userprog/syscall.h" />
+        <option value="$PROJECT_DIR$/src/userprog/syscall.c" />
+        <option value="$PROJECT_DIR$/src/threads/thread.h" />
+        <option value="$PROJECT_DIR$/src/userprog/exception.c" />
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
         <option value="$PROJECT_DIR$/src/threads/thread.c" />
+        <option value="$PROJECT_DIR$/src/userprog/process.c" />
       </list>
     </option>
   </component>
@@ -268,9 +373,15 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
+<<<<<<< HEAD
     <option name="y" value="24" />
     <option name="width" value="1301" />
     <option name="height" value="744" />
+=======
+    <option name="y" value="-4" />
+    <option name="width" value="1301" />
+    <option name="height" value="772" />
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -641,10 +752,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17063797" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+=======
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22828594" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -682,6 +800,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/threads/synch.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -749,6 +868,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
     <entry file="file://$PROJECT_DIR$/src/tests/threads/priority-donate-one.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -758,8 +879,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/arithmetic.c">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="15">
           <caret line="75" column="10" selection-start-line="75" selection-start-column="10" selection-end-line="75" selection-end-column="10" />
+=======
+        <state relative-caret-position="1395">
+          <caret line="93" column="32" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
+          <folding>
+            <element signature="e#5420#5516#0" expanded="true" />
+          </folding>
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
         </state>
       </provider>
     </entry>
@@ -767,6 +896,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-202">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
         </state>
       </provider>
     </entry>
@@ -808,15 +941,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/threads/alarm-zero.ck">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state relative-caret-position="1395">
+          <caret line="93" column="32" selection-start-line="93" selection-start-column="32" selection-end-line="93" selection-end-column="32" />
+          <folding>
+            <element signature="e#5420#5516#0" expanded="true" />
+          </folding>
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/tests/threads/tests.c">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="147">
           <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
         </state>
       </provider>
     </entry>
@@ -864,8 +1011,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/threads/fp_arithmetic.h">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="15">
           <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+=======
+        <state relative-caret-position="1830">
+          <caret line="122" column="19" selection-start-line="122" selection-start-column="6" selection-end-line="122" selection-end-column="19" />
+          <folding>
+            <element signature="e#5420#5516#0" expanded="true" />
+          </folding>
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
         </state>
       </provider>
     </entry>
@@ -962,6 +1117,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/threads/init.c">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="160">
           <caret line="104" column="14" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
           <folding>
@@ -969,6 +1125,10 @@
             <element signature="e#2580#2617#0" expanded="true" />
             <element signature="e#2763#2867#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="65">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="42" />
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
         </state>
       </provider>
     </entry>
@@ -982,6 +1142,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/threads/loader.h">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="180">
           <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
         </state>
@@ -991,11 +1152,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="16" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="16" />
+=======
+        <state relative-caret-position="405">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/threads/fp_arithmetic.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/threads/mlfqs-block.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="58" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/threads/alarm-zero.ck">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/threads/tests.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/threads/Grading">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/threads/palloc.c">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="16" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="16" />
         </state>
@@ -1012,10 +1214,66 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1470">
           <caret line="98" column="61" selection-start-line="98" selection-start-column="61" selection-end-line="98" selection-end-column="61" />
+=======
+        <state relative-caret-position="15">
+          <caret line="254" column="8" selection-start-line="254" selection-start-column="8" selection-end-line="254" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/userprog/pagedir.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/userprog/pagedir.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/userprog/gdt.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/userprog/build/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1084">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/threads/synch.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3935">
+          <caret line="268" column="3" selection-start-line="268" selection-start-column="3" selection-end-line="268" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/userprog/syscall.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/userprog/syscall.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="253" column="16" selection-start-line="253" selection-start-column="16" selection-end-line="253" selection-end-column="16" />
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/userprog/process.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2415">
@@ -1036,10 +1294,45 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/userprog/exception.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/threads/thread.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1950">
+          <caret line="130" column="25" selection-start-line="130" selection-start-column="16" selection-end-line="130" selection-end-column="25" />
+          <folding>
+            <element signature="e#5420#5516#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/threads/init.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="286" column="15" selection-start-line="286" selection-start-column="15" selection-end-line="286" selection-end-column="15" />
+          <folding>
+            <element signature="e#7321#7359#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/threads/thread.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="243" column="0" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/threads/thread.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -1054,6 +1347,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/userprog/process.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/userprog/process.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="574" column="7" selection-start-line="574" selection-start-column="7" selection-end-line="574" selection-end-column="7" />
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
           <folding />
         </state>
       </provider>

@@ -221,9 +221,14 @@ tid_t thread_create (const char *name, int priority,
   sf->eip = switch_entry;
   sf->ebp = 0;
 
+<<<<<<< HEAD
   t->file_name = name;
   t->parent = thread_tid();
   struct child * cp = (struct child *) malloc(sizeof(struct child));
+=======
+  t->parent = thread_tid();
+  struct child * cp = malloc(sizeof(struct child));
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
   cp->tid = t->tid;
   cp->t = t;
   cp->status = 1;
@@ -799,6 +804,7 @@ void set_mlfqs_priority(struct thread * t){
       new_priority = PRI_MIN;
     } else if (new_priority > PRI_MAX) {
       new_priority = PRI_MAX;
+<<<<<<< HEAD
     }
     t->priority = new_priority;
   }
@@ -811,6 +817,20 @@ bool is_thread_alive(tid_t thread_num){
     if(list_entry(e,struct thread, allelem)->tid == thread_num){
       return true;
     }
+=======
+    }
+    t->priority = new_priority;
+  }
+}
+
+
+bool is_thread_alive(tid_t thread_num){
+  struct list_elem * e;
+  for(e = list_begin(&all_list); e != list_end(&all_list); e = list_next(e)){
+    if(list_entry(e,struct thread, allelem)->tid == thread_num){
+      return true;
+    }
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
   }
   return false;
 }

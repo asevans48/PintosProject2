@@ -28,7 +28,10 @@
 #include "../lib/kernel/list.h"
 #include <string.h>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
 
 static thread_func start_process NO_RETURN;
 static bool load (const char *cmdline, void (**eip) (void), void **esp,char ** svptr);
@@ -105,17 +108,26 @@ start_process (void *file_name_)
   success = load(arg_parse, &if_.eip, &if_.esp,&svptr); //load stack?
 
   if (!success) {
+<<<<<<< HEAD
     thread_current()->cp->status = -1;
     thread_current()->cp->loaded = -1;
   }else{
     thread_current()->cp->status = 1;
+=======
+    thread_current()->cp->loaded = -1;
+  }else{
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
     thread_current()->cp->loaded = 1;
   }
 
   /* If load failed, quit. */
   palloc_free_page(file_name);
   if(!success){
+<<<<<<< HEAD
     thread_exit(-1);
+=======
+    thread_exit();
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
   }
 
 
@@ -144,7 +156,10 @@ process_wait (tid_t child_tid UNUSED)
 {
   int status = -1;
   struct child * child = get_child(child_tid);
+<<<<<<< HEAD
 
+=======
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
   if(!child){
     return TID_ERROR;
   }
@@ -156,6 +171,7 @@ process_wait (tid_t child_tid UNUSED)
   status = child->status;
   remove_child(child);
   return status;
+<<<<<<< HEAD
 }
 
 
@@ -180,6 +196,8 @@ void _exit_process(int status){
     };
   }
   file_close(fel->file);
+=======
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
 }
 
 /* Free the current process's resources. */
@@ -193,6 +211,7 @@ process_exit (void)
     struct list_elem *  el = list_begin(&cur->file_list);
     struct list_elem * end = list_end(&cur->file_list);
     while(el != end) {
+<<<<<<< HEAD
 
       struct list_elem *next = el->next;
       if(el) {
@@ -203,6 +222,14 @@ process_exit (void)
           free(f->file);
           free(f);
         }
+=======
+      struct list_elem *next = el->next;
+      struct file_elem *f = list_entry(el, struct file_elem, elem);
+      if (f != NULL) {
+        file_close(f);
+        list_remove(el);
+        free(f);
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
       }
       el = next;
     }
@@ -214,6 +241,7 @@ process_exit (void)
   struct list_elem *e = list_begin(&cur->children);
   struct list_elem *end = list_end(&cur->children);
   while( e != end){
+<<<<<<< HEAD
     break;
     struct list_elem * next = list_next(e);
     if(e) {
@@ -223,6 +251,12 @@ process_exit (void)
         free(child);
       }
     }
+=======
+    struct list_elem * next = list_next(e);
+    struct child * child = list_entry(e,struct child, elem);
+    list_remove(&child->elem);
+    free(child);
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
     e = next;
   }
   //set status to complete. exit is 0
@@ -385,6 +419,7 @@ load (const char * args, void (**eip) (void), void **esp, char ** svptr)
   for (i = 0; i < ehdr.e_phnum; i++)
   {
     struct Elf32_Phdr phdr;
+<<<<<<< HEAD
 
     if (file_ofs < 0 || file_ofs > file_length (file))
       goto done;
@@ -395,6 +430,18 @@ load (const char * args, void (**eip) (void), void **esp, char ** svptr)
       goto done;
 
 
+=======
+
+    if (file_ofs < 0 || file_ofs > file_length (file))
+      goto done;
+
+    file_seek (file, file_ofs);
+
+    if (file_read (file, &phdr, sizeof phdr) != sizeof phdr)
+      goto done;
+
+
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
     file_ofs += sizeof phdr;
     switch (phdr.p_type)
     {
@@ -443,18 +490,29 @@ load (const char * args, void (**eip) (void), void **esp, char ** svptr)
   }
 
   /* Set up stack. */
+<<<<<<< HEAD
   if (!setup_stack (esp,args,svptr))
+=======
+  if (!setup_stack (esp,args,&svptr))
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
     goto done;
 
   /* Start address. */
   *eip = (void (*) (void)) ehdr.e_entry;
 
+
   success = true;
 
   done:
+<<<<<<< HEAD
     /* We arrive here whether the load is successful or not. */
     file_close (file);
     return success;
+=======
+  /* We arrive here whether the load is successful or not. */
+  file_close (file);
+  return success;
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
 }
 
 
@@ -582,6 +640,7 @@ setup_stack (void **esp,const char * args,char ** svptr)
       *esp = PHYS_BASE;
 
       //get argument size and args parsed array and create address array
+<<<<<<< HEAD
       char * token;
       char ** argsv = (char **) malloc(2 * sizeof(char *));
       int argsc = 0;
@@ -614,12 +673,58 @@ setup_stack (void **esp,const char * args,char ** svptr)
       token = *esp;
       *esp -= sizeof(char **);
       memcpy(*esp,&token,sizeof(char **));
+=======
+      char * token = NULL;
+      char * args = (char *) malloc(2 * sizeof(char));
+      int argsc = 0;
+      int currSize = 2;
+      while((token = strtok_r(NULL," " ,svptr)) == NULL){
+        args[argsc] = token;
+        argsc += 1;
+        if(argsc >= currSize){
+          currSize *= 2;
+          args = realloc(args,sizeof(char)* currSize);
+        }
+
+      }
+
+      //iterate backwards pushing the array
+      for(int i = argsc - 1; i >= 0; i--){
+        size_t str_length = strlen(args[i]);
+        *esp -= str_length + 1;
+        memcpy(*esp,args[i],str_length + 1);
+      }
+
+      int offset = (size_t) *esp % 4;
+
+      args[argsc] = 0;
+      if(offset) {
+        esp -= offset;
+        memcpy(*esp, args[argsc], sizeof(int));
+      }
+
+      for(int i = argsc -1; i >= 0;i --){
+         *esp -= sizeof(char *);
+         memcpy(*esp,&args[i],sizeof(char*));
+      }
+
+
+      *esp -= sizeof(char **);
+      memcpy(*esp,&*esp,sizeof(char *));
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
 
       *esp -= sizeof(int);
       memcpy(*esp,&argsc,sizeof(int));
 
+<<<<<<< HEAD
       *esp -= sizeof(void *);
       memcpy(*esp,&argsv[argsc],sizeof(void *));
+=======
+      *esp -= sizeof(int);
+      memcpy(*esp,&args[argsc],sizeof(void *));
+
+      free(args);
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
 
     }else {
       palloc_free_page(kpage);
@@ -627,6 +732,10 @@ setup_stack (void **esp,const char * args,char ** svptr)
     }
   }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
   return success;
 }
 

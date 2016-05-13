@@ -15,6 +15,10 @@ void process_exit (void);
 void process_activate (void);
 void append_argument(char * arg, struct argument * args,int i);
 
+<<<<<<< HEAD
 void _exit_process(int status);
+=======
+
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
 
 #endif /* userprog/process.h */

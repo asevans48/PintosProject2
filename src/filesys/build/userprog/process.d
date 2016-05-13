@@ -7,7 +7,11 @@ userprog/process.o: ../../userprog/process.c ../../userprog/process.h \
  ../../userprog/pagedir.h ../../userprog/tss.h ../../filesys/directory.h \
  ../../devices/block.h ../../filesys/file.h ../../filesys/off_t.h \
  ../../filesys/filesys.h ../../threads/flags.h ../../threads/init.h \
+<<<<<<< HEAD
  ../../threads/interrupt.h ../../threads/palloc.h ../../threads/malloc.h \
  ../../threads/vaddr.h ../../threads/synch.h \
  ../../userprog/../threads/thread.h ../../userprog/process.h \
  ../../userprog/syscall.h ../../userprog/../lib/kernel/list.h
+=======
+ ../../threads/interrupt.h ../../threads/palloc.h ../../threads/vaddr.h
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347

@@ -120,6 +120,7 @@ struct thread
     struct list donators;               /*a list of donators*/
     struct list_elem donate_elem;       /*a donation element*/
     struct lock *requested_lock;        /*the requested lock*/
+<<<<<<< HEAD
 
     struct list children;               /*a list of child threads*/
     struct list_elem child_elem;        /*a child element*/
@@ -128,6 +129,16 @@ struct thread
     struct child * cp;                  /*The child process*/
 
     char * file_name;
+=======
+
+    struct list children;               /*a list of child threads*/
+    struct list_elem child_elem;        /*a child element*/
+
+    tid_t parent;                       /*the parent identifier*/
+    struct child * cp;                  /*The child process*/
+
+
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
     struct list file_list;              /*A list of file descriptors owned by each process*/
     int fd;
 
@@ -169,7 +180,11 @@ struct thread *thread_current (void);
 tid_t thread_tid (void);
 const char *thread_name (void);
 
+<<<<<<< HEAD
 void thread_exit (int status);
+=======
+void thread_exit (void);
+>>>>>>> c7cbf4abef266e72c85e83e66d4d46dd24d44347
 void thread_yield (void);
 
 /* Performs some operation on thread t, given auxiliary data AUX. */
