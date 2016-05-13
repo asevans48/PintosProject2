@@ -24,6 +24,28 @@ typedef int tid_t;
 #define PRI_DEFAULT 31                  /* Default priority. */
 #define PRI_MAX 63                      /* Highest priority. */
 
+/*
+ * The file element structure for the file list in each process.
+ */
+struct file_elem{
+    int fd;
+    const char * file_name;
+    struct file * file;
+    struct list_elem elem;
+};
+
+/**
+ * A child process struct to hold in a list of child processes
+ */
+struct child{
+    tid_t  tid;
+    struct thread * t;
+    int parent;
+    int status;
+    int loaded;
+    struct list_elem elem;              /* List element. */
+};
+
 /* A kernel thread or user process.
 
    Each thread structure is stored in its own 4 kB page.  The
@@ -83,28 +105,39 @@ typedef int tid_t;
 struct thread
 {
     /* Owned by thread.c. */
-    tid_t tid;/* Thread identifier. */
-    int recent_cpu;
-    int nice;
+    tid_t tid;                          /* Thread identifier. */
+    int recent_cpu;                     /*Threads recent cpu value*/
+    int nice;                           /*Threads nice value*/
     enum thread_status status;          /* Thread state. */
     char name[16];                      /* Name (for debugging purposes). */
+    char * program;                     /*program name*/
     uint8_t *stack;                     /* Saved stack pointer. */
     int priority;                       /* Priority. */
-    int default_priority;
+    int default_priority;               /*default priority*/
     struct list_elem allelem;           /* List element for all threads list. */
-    int64_t waketime;
-    struct list_elem sleep_elem;
-    struct list donators;
-    struct list_elem donate_elem;
-    struct lock *requested_lock;
+    int64_t waketime;                   /*time to wakeup*/
+    struct list_elem sleep_elem;        /*sleep element*/
+    struct list donators;               /*a list of donators*/
+    struct list_elem donate_elem;       /*a donation element*/
+    struct lock *requested_lock;        /*the requested lock*/
 
+    struct list children;               /*a list of child threads*/
+    struct list_elem child_elem;        /*a child element*/
+
+    tid_t parent;                       /*the parent identifier*/
+    struct child * cp;                  /*The child process*/
+
+    char * file_name;
+    struct list file_list;              /*A list of file descriptors owned by each process*/
+    int fd;
 
     /* Shared between thread.c and synch.c. */
     struct list_elem elem;              /* List element. */
 
+
 #ifdef USERPROG
     /* Owned by userprog/process.c. */
-    uint32_t *pagedir;                  /* Page directory. */
+    uint32_t * pagedir;                  /* Page directory. */
 #endif
 
     /* Owned by thread.c. */
@@ -117,6 +150,11 @@ struct thread
 extern bool thread_mlfqs;
 void thread_init (void);
 void thread_start (void);
+
+bool is_thread_alive(tid_t thread_num);
+
+struct child * get_child(tid_t child_tid);
+void remove_child(struct child * child);
 
 void thread_tick (void);
 void thread_print_stats (void);
@@ -131,7 +169,7 @@ struct thread *thread_current (void);
 tid_t thread_tid (void);
 const char *thread_name (void);
 
-void thread_exit (void) NO_RETURN;
+void thread_exit (int status);
 void thread_yield (void);
 
 /* Performs some operation on thread t, given auxiliary data AUX. */
@@ -153,4 +191,9 @@ void set_recent_cpu(struct thread *t);
 void set_avg_load(struct thread *t);
 void set_mlfqs_priority(struct thread *t);
 void reset_proiriorities_mlfqs(void);
+void add_child(struct thread * t, struct child * cp);
+void remove_children(struct thread * cur);
+void remove_donators(struct lock *lock);
+int set_q_priority(struct thread * t);
+void update_priority (void);
 #endif /* threads/thread.h */

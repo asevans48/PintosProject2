@@ -216,7 +216,6 @@ lock_acquire (struct lock *lock)
   if (!thread_mlfqs && lock->holder) {
     current->requested_lock = lock;
     list_insert_ordered(&lock->holder->donators, &current->donate_elem, (list_less_func *) &priority_sort, NULL);
-    //current->requested_lock = lock;
   }
 
   sema_down (&lock->semaphore);
