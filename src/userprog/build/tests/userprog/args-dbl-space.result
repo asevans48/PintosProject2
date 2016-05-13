@@ -1,5 +1,0 @@
-FAIL
-Kernel panic in run: PANIC at ../../lib/kernel/list.c:172 in list_insert(): assertion `elem != NULL' failed.
-Call stack: 0xc0028212
-Translation of call stack:
-0xc0028212: debug_panic (.../../lib/kernel/debug.c:38)
